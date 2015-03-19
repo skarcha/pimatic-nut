@@ -1,0 +1,33 @@
+{
+  "name": "pimatic-nut",
+  "description": "Provides NUT (Network UPS Tools) info to Pimatic",
+  "author": "Antonio Pérez <aperez@skarcha.com>",
+  "main": "nut",
+  "files": [
+    "nut.coffee",
+    "README.md",
+    "LICENSE",
+    "nut-config-schema.coffee",
+    "device-config-schema.coffee"
+  ],
+  "version": "0.1.0",
+  "homepage": "https://github.com/skarcha/pimatic-nut",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skarcha/pimatic-nut.git"
+  },
+  "configSchema": "nut-config-schema.coffee",
+  "dependencies": {
+    "node-nut": "0.1.0"
+  },
+  "peerDependencies": {
+    "pimatic": "0.8.*"
+  },
+  "engines": {
+    "node": ">0.8.x",
+    "npm": ">1.1.x"
+  },
+  "keywords": [
+    "pimatic", "NUT", "UPS"
+  ]
+}
