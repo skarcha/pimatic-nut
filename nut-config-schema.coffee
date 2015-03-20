@@ -1,6 +1,6 @@
-# pimatic-lm-sensors configuration options
+# pimatic-nut configuration options
 module.exports = {
-  title: "pimatic-lm-sensors config options"
+  title: "pimatic-nut config options"
   type: "object"
   properties: {}
 }
