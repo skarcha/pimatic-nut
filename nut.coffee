@@ -3,7 +3,7 @@ module.exports = (env) ->
   # Require the  bluebird promise library
   Promise = env.require 'bluebird'
 
- # Require sensors.js library (https://www.npmjs.com/package/sensors.js).
+ # Require node-nut library (https://www.npmjs.com/package/node-nut).
   Nut = require 'node-nut'
 
 
