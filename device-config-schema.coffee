@@ -54,8 +54,8 @@ module.exports = {
               type: "boolean"
               required: false
             labels:
-              description: "Labels assigned to attribute values"
-              type: "boolean"
+              description: "Labels assigned to attribute values. Don't set. Will be set at runtime"
+              type: "array"
               required: false
   }
 }
