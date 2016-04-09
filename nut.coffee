@@ -125,6 +125,9 @@ module.exports = (env) ->
       oNut.on('ready', () ->
           this.GetUPSVars(upsid, get_data)
       )
+      oNut.on('error', (error) ->
+        env.logger.error error.message ? error
+      )
       oNut.start()
 
   # ###Finally
