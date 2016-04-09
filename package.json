@@ -2,6 +2,7 @@
   "name": "pimatic-nut",
   "description": "Provides NUT (Network UPS Tools) info to Pimatic",
   "author": "Antonio Pérez <aperez@skarcha.com>",
+  "license": "MIT",
   "main": "nut",
   "files": [
     "nut.coffee",
@@ -21,7 +22,7 @@
     "node-nut": "0.1.0"
   },
   "peerDependencies": {
-    "pimatic": "0.8.*"
+    "pimatic": ">=0.8.0 <1.0.0"
   },
   "engines": {
     "node": ">0.8.x",
