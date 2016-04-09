@@ -21,8 +21,8 @@ module.exports = (env) ->
   class NutSensor extends env.devices.Sensor
 
     constructor: (@config) ->
-      @name = config.name
-      @id = config.id
+      @name = @config.name
+      @id = @config.id
 
       @attributes = {}
       @upsvars = []
@@ -110,7 +110,7 @@ module.exports = (env) ->
 
       if @attributes
         setInterval( ( =>
-          @readUPSData(config.nutport or 3493, config.nuthost or 'localhost', config.upsid)
+          @readUPSData(@config.nutport or 3493, @config.nuthost or 'localhost', @config.upsid)
         ), min_interval)
 
       super()
