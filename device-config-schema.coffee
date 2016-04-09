@@ -10,6 +10,7 @@ module.exports = {
       nutport:
         description: "NUT server port"
         type: "number"
+        default: 3493
       upsid:
         description: "UPS ID"
         type: "string"
@@ -30,14 +31,14 @@ module.exports = {
               default: 60000
             var:
               type: "string"
-              description: "Required if an attribute is defined other than batteryCharge, inputVoltage, load, or status"
+              description: "The corresponding NUT variable. Required if an attribute is defined other than batteryCharge, inputVoltage, load, or status"
               required: false
             type:
-              description: "The type of the value"
+              description: "The type of the value. Required if an attribute is defined other than batteryCharge, inputVoltage, load, or status"
               type: "string"
               required: false
             description:
-              description: "A description provided for the attribute"
+              description: "A description provided for the attribute. Don't set. Will be set at runtime"
               type: "string"
               required: false
             acronym:
@@ -45,7 +46,7 @@ module.exports = {
               type: "string"
               required: false
             unit:
-              description: "The unit to show in the frontend"
+              description: "The unit to show in the frontend. Required if an attribute is defined other than batteryCharge, inputVoltage, load, or status"
               type: "string"
               required: false
             discrete:
