@@ -98,7 +98,7 @@ module.exports = (env) ->
               )
 
           @_createGetter(name, getter)
-          setInterval( (=>
+          @getterIntervalId = setInterval( (=>
             getter().then( (value) =>
               @emit name, value
             ).catch ( (error) =>
@@ -109,10 +109,15 @@ module.exports = (env) ->
 
 
       if @attributes
-        setInterval( ( =>
+        @readDataIntervalId = setInterval( ( =>
           @readUPSData(@config.nutport or 3493, @config.nuthost or 'localhost', @config.upsid)
         ), min_interval)
 
+      super()
+
+    destroy: () ->
+      clearInterval @getterIntervalId if @getterIntervalId?
+      clearInterval @readDataIntervalId if @readDataIntervalId?
       super()
 
     readUPSData: (port, host, upsid) ->
