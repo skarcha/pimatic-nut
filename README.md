@@ -23,7 +23,7 @@ But you can define your own, using a variable name returned by de NUT server. In
 
 ### NUT variables
 
-if you want to define your own attribute using a NUT variable, you should do this to get the list of available variables for your UPS:
+If you want to define your own attribute using a NUT variable, you should do this to get the list of available variables for your UPS:
 
 ```
 $ echo "LIST VAR myups" | nc localhost 3493
@@ -78,7 +78,7 @@ Add this to your `config.json`:
     "nutport": 3493,
     "upsid": "myups1",
     "attributes": [
-        {"
+        {
           "name": "status"
         },
         {
@@ -113,7 +113,7 @@ Add this to your `config.json`:
     "nutport": 3493,
     "upsid": "myups2",
     "attributes": [
-        {"
+        {
           "name": "status"
         },
         {
