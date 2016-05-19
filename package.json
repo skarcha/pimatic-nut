@@ -11,7 +11,7 @@
     "nut-config-schema.coffee",
     "device-config-schema.coffee"
   ],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/skarcha/pimatic-nut",
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
     "npm": ">1.1.x"
   },
   "keywords": [
-    "pimatic", "NUT", "UPS"
+    "pimatic",
+    "NUT",
+    "UPS"
   ]
 }
