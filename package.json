@@ -19,7 +19,8 @@
   },
   "configSchema": "nut-config-schema.coffee",
   "dependencies": {
-    "node-nut": "0.1.0"
+    "node-nut": "1.0.3",
+    "pimatic": "^0.9.50"
   },
   "peerDependencies": {
     "pimatic": ">=0.8.0 <1.0.0"
