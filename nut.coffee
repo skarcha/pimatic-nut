@@ -123,8 +123,11 @@ module.exports = (env) ->
     readUPSData: (port, host, upsid) ->
       oNut = new Nut(port, host)
 
-      get_data = (data) =>
-        @upsvars = data
+      get_data = (data, error) =>
+        if error
+          env.logger.error error.message ? error
+        else
+          @upsvars = data
         oNut.close()
 
       oNut.on('ready', () ->
